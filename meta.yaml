@@ -1,0 +1,26 @@
+{% set name = "softserve-interview" %}
+{% set version = "1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  path: .
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+
+test:
+  commands:
+    - softserve-interview
+
+about:
+  home: "https://github.com/bartbrzo/softserve-interview"
+  license: "MIT"
+  summary: "A simple conda package built with CMake for a SoftServe interview"
